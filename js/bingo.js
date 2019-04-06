@@ -31,15 +31,39 @@ var icons = [
   "characters/Euron Greyjoy.png",
   "characters/Gendry.jpg",
   "characters/Podrick Payne.jpg",
-  "characters/Jaqen H’ghar.jpg",
+  "characters/Jaqen Hghar.jpg",
   "characters/Grey Worm.jpg",
 ]
 
+// Knuth shuffle: https://github.com/coolaj86/knuth-shuffle
+function shuffle(array) {
+  var curr = array.length - 1;
 
-for (var i = 0; i < icons.length; i++) {
+  // Starting from the end of the array.
+  // While there remain elements to shuffle...
+  while (0 !== curr) {
+    // Pick a remaining element...
+    let rand = Math.floor(Math.random() * curr);
+    // And swap it with the current element.
+    let tmp = array[curr];
+    array[curr] = array[rand];
+    array[rand] = tmp;
+
+    curr -= 1;
+  }
+
+  return array;
+}
+
+// Shuffle all characters.
+// Use "GoT.png" for the center of the bingo tile (index = 12)
+tiles = shuffle(icons)
+tiles[12] = "Got.png"
+for (var i = 0; i < 25; i++) {
   var img = document.createElement("img");
   img.className = 'tile';
-  img.src = icons[i];
+  console.log(tiles[i])
+  img.src = tiles[i];
   var src = document.getElementById("img" + (i+1));
   src.appendChild(img);
 
