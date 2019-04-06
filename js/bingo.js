@@ -65,7 +65,7 @@ for (let i = 0; i < tiles.length; i++) {
 }
 
 // Use "GoT.png" for the center of the bingo tile (index = 12)
-tiles[12] = "Got.png";
+tiles[12] = "GoT.png";
 names[12] = "";
 
 for (let i = 0; i < 25; i++) {
