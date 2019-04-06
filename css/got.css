@@ -1,7 +1,18 @@
+@font-face {
+  font-family: 'ancient';
+  src: URL('ancient.ttf') format('truetype');
+}
+
 .tile {
   border-radius: 10%;
   width: 256;
   height: 256;
+}
+
+.tileDiv {
+  text-align: center;
+  font-family: ancient, sans-serif;
+  font-size: 24px;
 }
 
 table { 

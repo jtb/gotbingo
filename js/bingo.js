@@ -41,6 +41,8 @@ for (var i = 0; i < icons.length; i++) {
   img.className = 'tile';
   img.src = icons[i];
   var src = document.getElementById("img" + (i+1));
-  src.appendChild(img)
-}
+  src.appendChild(img);
 
+  var txt = document.createTextNode("Gregor Clegane (The Mountain)");
+  src.appendChild(txt);
+}
