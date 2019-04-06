@@ -1,5 +1,7 @@
 .tile {
   border-radius: 10%;
+  width: 256;
+  height: 256;
 }
 
 table { 
