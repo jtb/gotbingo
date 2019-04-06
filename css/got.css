@@ -6,6 +6,10 @@
   font-family: 'chopin';
   src: URL('chopin.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'optien';
+  src: URL('optien.ttf') format('truetype');
+}
 
 .tile {
   border-radius: 10%;
@@ -22,8 +26,8 @@ txt {
 
 .tileDiv {
   text-align: center;
-  font-family: chopin, sans-serif;
-  font-size: 24px;
+  font-family: optien, sans-serif;
+  font-size: 30px;
   position:relative;
   height:100%;
 }
