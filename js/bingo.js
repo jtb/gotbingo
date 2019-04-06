@@ -75,6 +75,9 @@ for (let i = 0; i < 25; i++) {
   var src = document.getElementById("img" + (i+1));
   src.appendChild(img);
 
+  var txtDiv = document.createElement("div");
   var txt = document.createTextNode(names[i]);
-  src.appendChild(txt);
+  txtDiv.appendChild(txt);
+  txtDiv.className = 'txt';
+  src.appendChild(txtDiv);
 }
