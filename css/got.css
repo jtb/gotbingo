@@ -11,6 +11,10 @@
   src: URL('optien.ttf') format('truetype');
 }
 
+.pw {
+  width: 1500;
+}
+
 .tile {
   border-radius: 10%;
   width: 256;
@@ -34,4 +38,17 @@ txt {
 
 table { 
   padding:0; margin:0;
+}
+
+@media print {
+  .pw {
+     width: 180mm;
+  }
+  .tile {
+      width: 36mm;
+      height: 36mm;
+  }
+  .tileDiv {
+    font-size: 16px;
+  }
 }
