@@ -13,8 +13,8 @@
 
 .tile {
   border-radius: 10%;
-  width: 256;
-  height: 256;
+  width: 134;
+  height: 134;
   #position: absolute;
   top: 0;
 }
@@ -27,7 +27,7 @@ txt {
 .tileDiv {
   text-align: center;
   font-family: optien, sans-serif;
-  font-size: 30px;
+  font-size: 16px;
   position:relative;
   height:100%;
 }
