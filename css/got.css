@@ -42,13 +42,13 @@ table {
 
 @media print {
   .pw {
-     width: 180mm;
+     width: 185mm;
   }
   .tile {
       width: 36mm;
       height: 36mm;
   }
   .tileDiv {
-    font-size: 16px;
+    font-size: 3mm;
   }
 }
