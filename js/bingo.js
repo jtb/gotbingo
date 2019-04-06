@@ -56,17 +56,25 @@ function shuffle(array) {
 }
 
 // Shuffle all characters.
+tiles = shuffle(icons);
+var names = [];
+for (let i = 0; i < tiles.length; i++) {
+  // Each tiles file is of the format <path>/<name_of_character>.<file_type>.
+  // Here we extract the filename.
+  names.push(tiles[i].split("/")[1].split(".")[0]);
+}
+
 // Use "GoT.png" for the center of the bingo tile (index = 12)
-tiles = shuffle(icons)
-tiles[12] = "Got.png"
-for (var i = 0; i < 25; i++) {
+tiles[12] = "Got.png";
+names[12] = "";
+
+for (let i = 0; i < 25; i++) {
   var img = document.createElement("img");
   img.className = 'tile';
-  console.log(tiles[i])
   img.src = tiles[i];
   var src = document.getElementById("img" + (i+1));
   src.appendChild(img);
 
-  var txt = document.createTextNode("Gregor Clegane (The Mountain)");
+  var txt = document.createTextNode(names[i]);
   src.appendChild(txt);
 }
