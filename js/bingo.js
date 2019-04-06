@@ -1,6 +1,28 @@
 var icons = [
   "icons/Tyrion Lannister.jpg",
   "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
+  "icons/Tyrion Lannister.jpg",
   "icons/Tyrion Lannister.jpg"
 ]
 
