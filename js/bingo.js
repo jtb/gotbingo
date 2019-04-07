@@ -71,24 +71,12 @@ function getJsonFromUrl(url) {
     return result;
 }
 
-// Shuffle all characters.
-
-// seed = getRandomArbitrary(100000, 999999);
+// Shuffle all characters using a random seed.
 params = getJsonFromUrl();
 var seed = params["seed"];
 if (seed === undefined ) {
   seed = getRandomArbitrary(100000, 999999);
 }
-
-var mydiv = document.getElementById("link");
-var aTag = document.createElement('a');
-var url = window.location.href.split('?')[0] + '?seed=' + seed;
-aTag.setAttribute('href', url);
-//aTag.innerHTML = "Get link for this Bingo Card";
-aTag.innerHTML = url;
-mydiv.appendChild(aTag);
-
-//window.history.pushState(null, null, '?seed=' + seed);
 tiles = shuffle(icons, seed);
 var names = [];
 for (let i = 0; i < tiles.length; i++) {
@@ -96,6 +84,16 @@ for (let i = 0; i < tiles.length; i++) {
   // Here we extract the filename.
   names.push(tiles[i].split("/")[1].split(".")[0]);
 }
+
+// Display deep link in bottom right container.
+var mydiv = document.getElementById("link");
+var aTag = document.createElement('a');
+var url = window.location.href.split('?')[0] + '?seed=' + seed;
+aTag.setAttribute('href', url);
+aTag.className = 'deeplink';
+aTag.innerHTML = url;
+mydiv.appendChild(aTag);
+
 
 // Use "GoT.png" for the center of the bingo tile (index = 12)
 tiles[12] = "GoT.png";

@@ -59,11 +59,14 @@ table tr td {
   color: white;
 }
 
-/* Bottom right text */
+/* Bottom right container for deep link. */
 .bottom-right {
   position: absolute;
   bottom: 8px;
   right: 16px;
-  background-color:white;
   font-size: 18px;
+}
+
+.deeplink {
+  color: white;
 }
