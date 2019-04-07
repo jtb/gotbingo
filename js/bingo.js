@@ -9,7 +9,7 @@ var icons = [
   "characters/Daenerys Targaryen.jpg",
   "characters/Arya Stark.jpg",
   "characters/Yara Greyjoy.jpg",
-  "characters/The Knight King.jpg",
+  "characters/The Night King.jpg",
   "characters/Davos Seaworth.jpg",
   "characters/Lyanna Mormont.png",
   "characters/Missandei.png",
