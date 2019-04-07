@@ -36,7 +36,8 @@ var icons = [
 ]
 
 // Knuth shuffle: https://github.com/coolaj86/knuth-shuffle
-function shuffle(array) {
+function shuffle(array, seed) {
+  Math.seedrandom(''+seed);
   var curr = array.length - 1;
 
   // Starting from the end of the array.
@@ -44,7 +45,7 @@ function shuffle(array) {
   while (0 !== curr) {
     // Pick a remaining element...
     let rand = Math.floor(Math.random() * curr);
-    // And swap it with the current element.
+     // And swap it with the current element.
     let tmp = array[curr];
     array[curr] = array[rand];
     array[rand] = tmp;
@@ -55,8 +56,40 @@ function shuffle(array) {
   return array;
 }
 
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function getJsonFromUrl(url) {
+    if(!url) url = location.search;
+    var query = url.substr(1);
+    var result = {};
+    query.split("&").forEach(function(part) {
+	    var item = part.split("=");
+	    result[item[0]] = decodeURIComponent(item[1]);
+	});
+    return result;
+}
+
 // Shuffle all characters.
-tiles = shuffle(icons);
+
+// seed = getRandomArbitrary(100000, 999999);
+params = getJsonFromUrl();
+var seed = params["seed"];
+if (seed === undefined ) {
+  seed = getRandomArbitrary(100000, 999999);
+}
+
+var mydiv = document.getElementById("link");
+var aTag = document.createElement('a');
+var url = window.location.href.split('?')[0] + '?seed=' + seed;
+aTag.setAttribute('href', url);
+//aTag.innerHTML = "Get link for this Bingo Card";
+aTag.innerHTML = url;
+mydiv.appendChild(aTag);
+
+//window.history.pushState(null, null, '?seed=' + seed);
+tiles = shuffle(icons, seed);
 var names = [];
 for (let i = 0; i < tiles.length; i++) {
   // Each tiles file is of the format <path>/<name_of_character>.<file_type>.
